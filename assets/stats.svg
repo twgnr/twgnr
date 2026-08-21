@@ -26,17 +26,17 @@
   </circle>
   <text x="36" y="32" fill="#47C2FF" font-size="10" font-weight="600" letter-spacing="2.4" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">GITHUB / TWGNR</text>
 
-  <text x="20" y="86" fill="#47c2ff" font-size="23" font-weight="700" font-family="'Segoe UI', Helvetica, Arial, sans-serif">—</text>
+  <text x="20" y="86" fill="#47c2ff" font-size="23" font-weight="700" font-family="'Segoe UI', Helvetica, Arial, sans-serif">1.1k</text>
   <text x="20" y="102" fill="#9AA4B2" font-size="8.5" letter-spacing="1.5" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">COMMITS (12 MO)</text>
-  <text x="147" y="86" fill="#5dacff" font-size="23" font-weight="700" font-family="'Segoe UI', Helvetica, Arial, sans-serif">—</text>
+  <text x="147" y="86" fill="#5dacff" font-size="23" font-weight="700" font-family="'Segoe UI', Helvetica, Arial, sans-serif">5</text>
   <text x="147" y="102" fill="#9AA4B2" font-size="8.5" letter-spacing="1.5" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">REPOSITORIES</text>
-  <text x="273" y="86" fill="#7297ff" font-size="23" font-weight="700" font-family="'Segoe UI', Helvetica, Arial, sans-serif">—</text>
+  <text x="273" y="86" fill="#7297ff" font-size="23" font-weight="700" font-family="'Segoe UI', Helvetica, Arial, sans-serif">2</text>
   <text x="273" y="102" fill="#9AA4B2" font-size="8.5" letter-spacing="1.5" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">STARS EARNED</text>
-  <text x="20" y="142" fill="#977feb" font-size="23" font-weight="700" font-family="'Segoe UI', Helvetica, Arial, sans-serif">—</text>
+  <text x="20" y="142" fill="#977feb" font-size="23" font-weight="700" font-family="'Segoe UI', Helvetica, Arial, sans-serif">3</text>
   <text x="20" y="158" fill="#9AA4B2" font-size="8.5" letter-spacing="1.5" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">PULL REQUESTS</text>
-  <text x="147" y="142" fill="#cb66c4" font-size="23" font-weight="700" font-family="'Segoe UI', Helvetica, Arial, sans-serif">—</text>
+  <text x="147" y="142" fill="#cb66c4" font-size="23" font-weight="700" font-family="'Segoe UI', Helvetica, Arial, sans-serif">0</text>
   <text x="147" y="158" fill="#9AA4B2" font-size="8.5" letter-spacing="1.5" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">ISSUES</text>
-  <text x="273" y="142" fill="#ff4d9d" font-size="23" font-weight="700" font-family="'Segoe UI', Helvetica, Arial, sans-serif">—</text>
+  <text x="273" y="142" fill="#ff4d9d" font-size="23" font-weight="700" font-family="'Segoe UI', Helvetica, Arial, sans-serif">23</text>
   <text x="273" y="158" fill="#9AA4B2" font-size="8.5" letter-spacing="1.5" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">FOLLOWERS</text>
-  <text x="20" y="184" fill="#9AA4B2" font-size="8" letter-spacing="1.4" opacity="0.75" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">AWAITING FIRST BUILD</text>
+  <text x="20" y="184" fill="#9AA4B2" font-size="8" letter-spacing="1.4" opacity="0.75" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">UPDATED 2026-08-21</text>
 </svg>
