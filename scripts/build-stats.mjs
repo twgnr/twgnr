@@ -141,7 +141,7 @@ const QUERY = `query($login:String!,$after:String){
     repositories(first:100,after:$after,ownerAffiliations:OWNER,isFork:false){
       totalCount
       pageInfo{hasNextPage endCursor}
-      nodes{ stargazerCount languages(first:12,orderBy:{field:SIZE,direction:DESC}){edges{size node{name}}} }
+      nodes{ isPrivate stargazerCount languages(first:12,orderBy:{field:SIZE,direction:DESC}){edges{size node{name}}} }
     }
   }
 }`;
@@ -151,6 +151,7 @@ async function fetchStats() {
   let after = null;
   let stars = 0;
   let repos = 0;
+  let privateSeen = 0;
   let head = null;
   const bytes = new Map();
 
@@ -169,12 +170,26 @@ async function fetchStats() {
     repos = u.repositories.totalCount;
     for (const n of u.repositories.nodes) {
       stars += n.stargazerCount;
+      if (n.isPrivate) privateSeen++;
       for (const e of n.languages.edges) {
         bytes.set(e.node.name, (bytes.get(e.node.name) || 0) + e.size);
       }
     }
     if (!u.repositories.pageInfo.hasNextPage) break;
     after = u.repositories.pageInfo.endCursor;
+  }
+
+  // A token that cannot see private repositories still returns a perfectly
+  // plausible-looking card — just one built from a fraction of the work. Say so
+  // loudly rather than letting a wrong picture ship quietly.
+  console.log(`counted ${repos} repositories (${privateSeen} private, ${repos - privateSeen} public), forks excluded`);
+  if (privateSeen === 0) {
+    console.log(
+      "::warning title=Stats cover public repositories only::" +
+        "No private repository was visible to this token, so private repos, their languages " +
+        "and private commits are missing from the cards. Add a classic PAT with the `repo` " +
+        "scope as the STATS_TOKEN secret to include them."
+    );
   }
 
   const total = [...bytes.values()].reduce((a, b) => a + b, 0) || 1;

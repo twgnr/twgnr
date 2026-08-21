@@ -1,0 +1,3 @@
+# Full-size screenshot originals. Only the generated 320x200 thumbnails in
+# assets/projects/ belong in the repo — see scripts/ for how they are made.
+/projects/

@@ -66,20 +66,26 @@ By day: software engineer and Oracle database specialist. By night the same keyb
 
 **Open source** — public repositories, dig in:
 
-| Project | What it is |
-| :-- | :-- |
-| **[SSHIT-Commander](https://github.com/twgnr/SSHIT-Commander2)** `Beta` | Dual-pane SSH/SFTP file manager with a real terminal (ConPTY locally, PTY over SSH). `C++20` · `Qt 6` · `libssh2` |
-| **[Web Vulnerability Scanner](https://github.com/twgnr/web-vulnerability-scanner)** | Non-destructive scanner for **authorized** security testing — strictly defensive by design. `Python` · `Flask` |
-| **[AI Stock Analyzer](https://github.com/twgnr/ai-stock-analyzer)** | Self-hosted, AI-assisted equity research & portfolio PWA with a multi-provider LLM backend. `Next.js` · `React` · `MongoDB` |
-| **[Stream Deck Tool UI](https://github.com/twgnr/Stream-Deck-Tool-UI)** | Open-source config tool for Elgato Stream Deck — dynamic keys, live metrics, macros. `Python` · `Tkinter` |
+| | Project | What it is |
+| :-- | :-- | :-- |
+| <a href="assets/projects-full/sshit-commander.png"><img src="assets/projects/sshit-commander.png" width="160" alt="" /></a> | **[SSHIT-Commander](https://github.com/twgnr/SSHIT-Commander2)** `Beta` | Dual-pane SSH/SFTP file manager with a real terminal (ConPTY locally, PTY over SSH). `C++20` · `Qt 6` · `libssh2` |
+| <a href="assets/projects-full/web-vulnerability-scanner.png"><img src="assets/projects/web-vulnerability-scanner.png" width="160" alt="" /></a> | **[Web Vulnerability Scanner](https://github.com/twgnr/web-vulnerability-scanner)** | Non-destructive scanner for **authorized** security testing — strictly defensive by design. `Python` · `Flask` |
+| <a href="assets/projects-full/ai-stock-analyzer.png"><img src="assets/projects/ai-stock-analyzer.png" width="160" alt="" /></a> | **[AI Stock Analyzer](https://github.com/twgnr/ai-stock-analyzer)** | Self-hosted, AI-assisted equity research & portfolio PWA with a multi-provider LLM backend. `Next.js` · `React` · `MongoDB` |
+| <img src="assets/projects/stream-deck-tool.svg" width="160" alt="" /> | **[Stream Deck Tool UI](https://github.com/twgnr/Stream-Deck-Tool-UI)** | Open-source config tool for Elgato Stream Deck — dynamic keys, live metrics, macros. `Python` · `Tkinter` |
 
 **Private highlights** — closed source, but this is what they are:
 
-| Project | What it is |
-| :-- | :-- |
-| **WaveSix** `active dev` | 6-oscillator wavetable synthesizer — Serum-format import, per-voice 16-slot mod matrix, band-limited wavetables. VST3 & standalone. `C++17` · `JUCE 8` · `VST3` |
-| **Beyond DJ** | Four-deck DJ system: club-style mixer, beatgrid sync, phase-vocoder keylock, Automix and a click-free custom playback engine. `C++` · `JUCE` · `DSP` |
-| **Password Manager** | Zero-knowledge vault across web, desktop & mobile — Argon2id, per-entry AES-256-GCM, passkeys (WebAuthn); the server only ever sees ciphertext. `Node.js` · `Electron` · `Capacitor` |
+| | Project | What it is |
+| :-- | :-- | :-- |
+| <a href="assets/projects-full/wavesix.png"><img src="assets/projects/wavesix.png" width="160" alt="" /></a> | **WaveSix** `active dev` | 6-oscillator wavetable synthesizer — Serum-format import, per-voice 16-slot mod matrix, band-limited wavetables. VST3 & standalone. `C++17` · `JUCE 8` · `VST3` |
+| <a href="assets/projects-full/beyond-dj.png"><img src="assets/projects/beyond-dj.png" width="160" alt="" /></a> | **Beyond DJ** | Four-deck DJ system: club-style mixer, beatgrid sync, phase-vocoder keylock, Automix and a click-free custom playback engine. `C++` · `JUCE` · `DSP` |
+| <a href="assets/projects-full/beyond-voice.png"><img src="assets/projects/beyond-voice.png" width="160" alt="" /></a> | **Beyond Voice** | Vocal channel strip: scale-aware pitch correction, harmonizer, formant shifting and a note editor for after-the-fact correction. `C++` · `JUCE` · `DSP` |
+| <a href="assets/projects-full/beyond-drums.png"><img src="assets/projects/beyond-drums.png" width="160" alt="" /></a> | **Beyond Drums** | TR-808-style rhythm composer — eleven fully synthesized instruments, no samples, with a channel strip each and a step sequencer. `C++` · `JUCE` · `Synthesis` |
+| <a href="assets/projects-full/beyond-guitar.png"><img src="assets/projects/beyond-guitar.png" width="160" alt="" /></a> | **Beyond Guitar** | Amp and effects simulation: tube-stage modelling with oversampling, cabinet IRs with mic positioning, drag-and-drop effect chain. `C++` · `JUCE` · `Amp Modelling` |
+| <a href="assets/projects-full/beyond-loops.png"><img src="assets/projects/beyond-loops.png" width="160" alt="" /></a> | **Beyond Loops** | Ten-track loop station with overdub, shared undo and phase-locked sync — memory fully pre-allocated so the audio thread never allocates. `C++` · `JUCE` |
+| <a href="assets/projects-full/pwd-manager.png"><img src="assets/projects/pwd-manager.png" width="160" alt="" /></a> | **Password Manager** | Zero-knowledge vault across web, desktop & mobile — Argon2id, per-entry AES-256-GCM, passkeys (WebAuthn); the server only ever sees ciphertext. `Node.js` · `Electron` · `Capacitor` |
+| <a href="assets/projects-full/netfett.png"><img src="assets/projects/netfett.png" width="160" alt="" /></a> | **NetFett** | Network monitor and protocol analyzer in pure Python — raw sockets, no Npcap, and a dissector stack with zero third-party dependencies. `Python` · `PySide6` |
+| <a href="assets/projects-full/buck-o-mo.png"><img src="assets/projects/buck-o-mo.png" width="160" alt="" /></a> | **Buck-O-Mo** | Budget app that reads receipts and invoices — OCR runs **on-device**, only the extracted figures ever reach the database. `Next.js` · `React` · `MongoDB` |
 
 ---
 
