@@ -81,8 +81,6 @@ By day: software engineer and Oracle database specialist. By night the same keyb
 | **Beyond DJ** | Four-deck DJ system: club-style mixer, beatgrid sync, phase-vocoder keylock, Automix and a click-free custom playback engine. `C++` · `JUCE` · `DSP` |
 | **Password Manager** | Zero-knowledge vault across web, desktop & mobile — Argon2id, per-entry AES-256-GCM, passkeys (WebAuthn); the server only ever sees ciphertext. `Node.js` · `Electron` · `Capacitor` |
 
-> …and plenty more in private repos: a whole **Beyond** audio suite (vocal, drums, guitar, loops), the `NetFett` protocol analyzer, remote-support & chat apps, and multi-tenant SaaS platforms. Walkthroughs and screenshots at **[twgnr.de](https://twgnr.de)**.
-
 ---
 
 <img src="assets/ch-04-github.svg" width="440" alt="04 / GitHub" />
