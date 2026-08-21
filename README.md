@@ -89,8 +89,8 @@ By day: software engineer and Oracle database specialist. By night the same keyb
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=twgnr&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=00000000&title_color=47C2FF&icon_color=FF4D9D&text_color=9AA4B2" alt="GitHub stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=twgnr&layout=compact&hide_border=true&bg_color=00000000&title_color=47C2FF&text_color=9AA4B2&langs_count=8" alt="Top languages" />
+<img height="200" src="assets/stats.svg" alt="GitHub stats" />
+<img height="200" src="assets/top-langs.svg" alt="Top languages" />
 
 </div>
 

@@ -1,0 +1,52 @@
+name: Profile stats
+
+# Refreshes assets/stats.svg and assets/top-langs.svg so the README never
+# depends on a third-party image service being up.
+
+on:
+  schedule:
+    - cron: "17 4 * * *" # daily, 04:17 UTC
+  workflow_dispatch: # lets you trigger it by hand from the Actions tab
+  push:
+    branches: [main]
+    paths:
+      - scripts/build-stats.mjs
+      - .github/workflows/profile-stats.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-stats
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build cards
+        env:
+          # STATS_TOKEN is a classic PAT with `repo` + `read:user`; it makes the
+          # private repositories count too. Without it the built-in token is
+          # used and the cards only reflect public activity.
+          GH_TOKEN: ${{ secrets.STATS_TOKEN || github.token }}
+          GH_LOGIN: ${{ github.repository_owner }}
+        run: node scripts/build-stats.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/stats.svg assets/top-langs.svg
+          if git diff --staged --quiet; then
+            echo "cards unchanged"
+          else
+            git commit -m "chore: refresh profile stats"
+            git push
+          fi

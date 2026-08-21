@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 200" width="410" height="200" fill="none" role="img" aria-label="GITHUB / TWGNR">
+  <defs>
+    <radialGradient id="stg1" cx="40" cy="0" r="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#47C2FF" stop-opacity="0.20"/><stop offset="1" stop-color="#47C2FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="stg2" cx="410" cy="200" r="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7D8CFF" stop-opacity="0.16"/><stop offset="1" stop-color="#7D8CFF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="stgrid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0 H0 V36" fill="none" stroke="#94B4DC" stroke-width="1" stroke-opacity="0.12"/>
+    </pattern>
+    <clipPath id="stclip"><rect x="0.5" y="0.5" width="409" height="199" rx="13.5"/></clipPath>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="409" height="199" rx="13.5" fill="#0A101D" fill-opacity="0.94"/>
+  <g clip-path="url(#stclip)">
+    <rect width="410" height="200" fill="url(#stg1)"/>
+    <rect width="410" height="200" fill="url(#stgrid)"/>
+    <rect width="410" height="200" fill="url(#stg2)"/>
+    <rect width="410" height="1.5" fill="#FFFFFF" opacity="0.10"/>
+  </g>
+  <rect x="0.5" y="0.5" width="409" height="199" rx="13.5" stroke="#94B4DC" stroke-opacity="0.28"/>
+
+  <circle cx="24" cy="28" r="3.4" fill="#47C2FF">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="3.6s" repeatCount="indefinite"/>
+  </circle>
+  <text x="36" y="32" fill="#47C2FF" font-size="10" font-weight="600" letter-spacing="2.4" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">GITHUB / TWGNR</text>
+
+  <text x="20" y="86" fill="#47c2ff" font-size="23" font-weight="700" font-family="'Segoe UI', Helvetica, Arial, sans-serif">—</text>
+  <text x="20" y="102" fill="#9AA4B2" font-size="8.5" letter-spacing="1.5" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">COMMITS (12 MO)</text>
+  <text x="147" y="86" fill="#5dacff" font-size="23" font-weight="700" font-family="'Segoe UI', Helvetica, Arial, sans-serif">—</text>
+  <text x="147" y="102" fill="#9AA4B2" font-size="8.5" letter-spacing="1.5" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">REPOSITORIES</text>
+  <text x="273" y="86" fill="#7297ff" font-size="23" font-weight="700" font-family="'Segoe UI', Helvetica, Arial, sans-serif">—</text>
+  <text x="273" y="102" fill="#9AA4B2" font-size="8.5" letter-spacing="1.5" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">STARS EARNED</text>
+  <text x="20" y="142" fill="#977feb" font-size="23" font-weight="700" font-family="'Segoe UI', Helvetica, Arial, sans-serif">—</text>
+  <text x="20" y="158" fill="#9AA4B2" font-size="8.5" letter-spacing="1.5" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">PULL REQUESTS</text>
+  <text x="147" y="142" fill="#cb66c4" font-size="23" font-weight="700" font-family="'Segoe UI', Helvetica, Arial, sans-serif">—</text>
+  <text x="147" y="158" fill="#9AA4B2" font-size="8.5" letter-spacing="1.5" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">ISSUES</text>
+  <text x="273" y="142" fill="#ff4d9d" font-size="23" font-weight="700" font-family="'Segoe UI', Helvetica, Arial, sans-serif">—</text>
+  <text x="273" y="158" fill="#9AA4B2" font-size="8.5" letter-spacing="1.5" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">FOLLOWERS</text>
+  <text x="20" y="184" fill="#9AA4B2" font-size="8" letter-spacing="1.4" opacity="0.75" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">AWAITING FIRST BUILD</text>
+</svg>

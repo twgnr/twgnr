@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 200" width="410" height="200" fill="none" role="img" aria-label="TOP LANGUAGES">
+  <defs>
+    <radialGradient id="tlg1" cx="40" cy="0" r="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#47C2FF" stop-opacity="0.20"/><stop offset="1" stop-color="#47C2FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tlg2" cx="410" cy="200" r="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7D8CFF" stop-opacity="0.16"/><stop offset="1" stop-color="#7D8CFF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="tlgrid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0 H0 V36" fill="none" stroke="#94B4DC" stroke-width="1" stroke-opacity="0.12"/>
+    </pattern>
+    <clipPath id="tlclip"><rect x="0.5" y="0.5" width="409" height="199" rx="13.5"/></clipPath>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="409" height="199" rx="13.5" fill="#0A101D" fill-opacity="0.94"/>
+  <g clip-path="url(#tlclip)">
+    <rect width="410" height="200" fill="url(#tlg1)"/>
+    <rect width="410" height="200" fill="url(#tlgrid)"/>
+    <rect width="410" height="200" fill="url(#tlg2)"/>
+    <rect width="410" height="1.5" fill="#FFFFFF" opacity="0.10"/>
+  </g>
+  <rect x="0.5" y="0.5" width="409" height="199" rx="13.5" stroke="#94B4DC" stroke-opacity="0.28"/>
+
+  <circle cx="24" cy="28" r="3.4" fill="#47C2FF">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="3.6s" repeatCount="indefinite"/>
+  </circle>
+  <text x="36" y="32" fill="#47C2FF" font-size="10" font-weight="600" letter-spacing="2.4" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">TOP LANGUAGES</text>
+
+  <text x="20" y="54" fill="#FFFFFF" fill-opacity="0.92" font-size="10.5" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">Awaiting first build</text>
+  <text x="390" y="54" fill="#9AA4B2" font-size="10" text-anchor="end" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">—</text>
+  <rect x="20" y="60" width="370" height="3.5" rx="1.75" fill="#94B4DC" fill-opacity="0.16"/>
+  <rect x="20" y="60" width="2" height="3.5" rx="1.75" fill="#47c2ff"/>
+</svg>
