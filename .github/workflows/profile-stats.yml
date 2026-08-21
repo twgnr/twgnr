@@ -25,6 +25,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history, so the rebase-free retry below can push
 
       - uses: actions/setup-node@v4
         with:
@@ -40,13 +42,36 @@ jobs:
         run: node scripts/build-stats.mjs
 
       - name: Commit if changed
+        env:
+          BRANCH: ${{ github.ref_name }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/stats.svg assets/top-langs.svg
-          if git diff --staged --quiet; then
-            echo "cards unchanged"
-          else
+
+          # The cards are build output, so this run's version always wins. Keep
+          # a copy aside: if the remote moved while we were building, we replay
+          # it onto the new tip instead of merging two generated SVGs.
+          mkdir -p "$RUNNER_TEMP/cards"
+          cp assets/stats.svg assets/top-langs.svg "$RUNNER_TEMP/cards/"
+
+          for attempt in 1 2 3; do
+            git fetch origin "$BRANCH"
+            git reset --hard "origin/$BRANCH"
+            cp "$RUNNER_TEMP/cards/stats.svg" "$RUNNER_TEMP/cards/top-langs.svg" assets/
+            git add assets/stats.svg assets/top-langs.svg
+
+            if git diff --staged --quiet; then
+              echo "cards unchanged"
+              exit 0
+            fi
+
             git commit -m "chore: refresh profile stats"
-            git push
-          fi
+            if git push origin "HEAD:$BRANCH"; then
+              echo "pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "push rejected on attempt $attempt - remote moved, replaying"
+          done
+
+          echo "could not push after 3 attempts"
+          exit 1
