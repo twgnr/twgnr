@@ -62,7 +62,7 @@ By day: software engineer and Oracle database specialist. By night the same keyb
 **At work** — my day job is internal, closed source software, so this stays general. These two are only a small part of it, but they're my favorites:
 
 - **Orchestrator** — Architect and lead developer of an in-house automation platform: a scheduler that keeps recurring data jobs running around the clock, runs them in parallel, handles failures with retries and back-off, and reports centrally on what ran and what did not.
-- **API** — Part of the team behind our central internal API — building it out and integrating the surrounding systems against it.
+- **API** — Part of the team behind our central internal and public API — building it out and integrating the surrounding systems against it.
 
 **Open source** — public repositories, dig in:
 
