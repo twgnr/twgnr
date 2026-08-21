@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 34" width="440" height="34" fill="none" role="img" aria-label="02 / TECH">
+  <defs>
+    <linearGradient id="rule" x1="138" y1="0" x2="432" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#47C2FF" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#47C2FF" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="18" cy="17" r="13" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#47C2FF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#47C2FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-60%" y="-200%" width="220%" height="500%">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- chip: reads as an object, not as running text, on light and dark alike -->
+  <rect x="0.5" y="4.5" width="125" height="25" rx="12.5"
+        fill="#0A101D" fill-opacity="0.94" stroke="#94B4DC" stroke-opacity="0.30"/>
+
+  <!-- status dot, breathing like the world pill in the nav -->
+  <circle cx="18" cy="17" r="11" fill="url(#halo)">
+    <animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="0.7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="18" cy="17" r="3.4" fill="#47C2FF">
+    <animate attributeName="opacity" values="0.55;1;0.55" dur="3.6s" begin="0.7s" repeatCount="indefinite"/>
+  </circle>
+
+  <text x="32" y="21" fill="#47C2FF" font-size="11" font-weight="600" letter-spacing="2.6"
+        font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace">02 / TECH</text>
+
+  <!-- rule that fades out, with a light pulse travelling along it -->
+  <path d="M138 17 H432" stroke="url(#rule)" stroke-width="1.4"/>
+  <path d="M138 17 H432" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round"
+        filter="url(#soft)" opacity="0.75" stroke-dasharray="9 294">
+    <animate attributeName="stroke-dashoffset" values="0;-303" dur="3.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.8;0" dur="3.8s" repeatCount="indefinite"/>
+  </path>
+</svg>

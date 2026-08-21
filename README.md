@@ -12,13 +12,15 @@
 
 <br/>
 
-[![Website](https://img.shields.io/badge/Website-twgnr.de-47C2FF?style=for-the-badge)](https://twgnr.de) [![Music](https://img.shields.io/badge/L0wFl0w-1ED760?style=for-the-badge&logo=spotify&logoColor=white)](https://twgnr.de/#music) ![Location](https://img.shields.io/badge/Andernach%20%2F%20Cologne%2C%20Germany-7D8CFF?style=for-the-badge)
+[![Website](https://img.shields.io/badge/twgnr.de-47C2FF?style=for-the-badge)](https://twgnr.de) [![Music](https://img.shields.io/badge/L0wFl0w-1ED760?style=for-the-badge&logo=spotify&logoColor=white)](https://twgnr.de/#music) ![Location](https://img.shields.io/badge/Andernach%20%2F%20Cologne%2C%20Germany-7D8CFF?style=for-the-badge)
 
 </div>
 
 ---
 
-### 👋 About
+<img src="assets/ch-01-about.svg" width="440" alt="01 / About" />
+
+### Two worlds, one keyboard.
 
 I build software across the whole spectrum — from **enterprise Oracle systems** that quietly run a business, to **real-time audio plugins** where every microsecond counts, to **self-hosted web apps** I actually use every day.
 
@@ -26,7 +28,9 @@ By day: software engineer and Oracle database specialist. By night the same keyb
 
 ---
 
-### 🧰 Tech
+<img src="assets/ch-02-tech.svg" width="440" alt="02 / Tech" />
+
+### What I build it with.
 
 <div align="center">
 
@@ -40,10 +44,6 @@ By day: software engineer and Oracle database specialist. By night the same keyb
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=flat-square&logo=windows&logoColor=white)
 ![Ableton Live](https://img.shields.io/badge/Ableton_Live-111111?style=flat-square&logo=abletonlive&logoColor=white)
 ![Native Instruments](https://img.shields.io/badge/Native_Instruments-1A1A1A?style=flat-square&logo=nativeinstruments&logoColor=white)
-![Adobe](https://img.shields.io/badge/Adobe-FF0000?style=flat-square&logo=adobe&logoColor=white)
-
-<br/><br/>
-
 ![Oracle DBA](https://img.shields.io/badge/Oracle_DBA-F80000?style=flat-square&logo=oracle&logoColor=white)
 ![PL/SQL](https://img.shields.io/badge/PL%2FSQL-F80000?style=flat-square&logo=oracle&logoColor=white)
 ![Oracle APEX](https://img.shields.io/badge/Oracle_APEX-F80000?style=flat-square&logo=oracle&logoColor=white)
@@ -55,7 +55,16 @@ By day: software engineer and Oracle database specialist. By night the same keyb
 
 ---
 
-### 🚀 Featured projects
+<img src="assets/ch-03-projects.svg" width="440" alt="03 / Projects" />
+
+### Things I build.
+
+**At work** — my day job is internal, closed source software, so this stays general. These two are only a small part of it, but they're my favorites:
+
+- **Orchestrator** — Architect and lead developer of an in-house automation platform: a scheduler that keeps recurring data jobs running around the clock, runs them in parallel, handles failures with retries and back-off, and reports centrally on what ran and what did not.
+- **API** — Part of the team behind our central internal API — building it out and integrating the surrounding systems against it.
+
+**Open source** — public repositories, dig in:
 
 | Project | What it is |
 | :-- | :-- |
@@ -64,7 +73,7 @@ By day: software engineer and Oracle database specialist. By night the same keyb
 | **[AI Stock Analyzer](https://github.com/twgnr/ai-stock-analyzer)** | Self-hosted, AI-assisted equity research & portfolio PWA with a multi-provider LLM backend. `Next.js` · `React` · `MongoDB` |
 | **[Stream Deck Tool UI](https://github.com/twgnr/Stream-Deck-Tool-UI)** | Open-source config tool for Elgato Stream Deck — dynamic keys, live metrics, macros. `Python` · `Tkinter` |
 
-**🔒 Private highlights** — closed source, but this is what they are:
+**Private highlights** — closed source, but this is what they are:
 
 | Project | What it is |
 | :-- | :-- |
@@ -76,7 +85,9 @@ By day: software engineer and Oracle database specialist. By night the same keyb
 
 ---
 
-### 📊 GitHub
+<img src="assets/ch-04-github.svg" width="440" alt="04 / GitHub" />
+
+### By the numbers.
 
 <div align="center">
 
