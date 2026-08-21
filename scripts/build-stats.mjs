@@ -12,7 +12,7 @@
  *   node scripts/build-stats.mjs --demo --out D  # sample numbers, for eyeballing
  */
 
-import { writeFileSync, mkdirSync } from "node:fs";
+import { writeFileSync, mkdirSync, readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 
 const argv = process.argv.slice(2);
@@ -57,7 +57,7 @@ function ramp(t) {
 }
 
 /** Panel chrome shared by both cards: dark plate, faint grid, glows, bevel. */
-function shell(id, title, body) {
+function shell(id, title, body, note) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" fill="none" role="img" aria-label="${esc(title)}">
   <defs>
     <radialGradient id="${id}g1" cx="40" cy="0" r="330" gradientUnits="userSpaceOnUse">
@@ -85,6 +85,7 @@ function shell(id, title, body) {
     <animate attributeName="opacity" values="0.5;1;0.5" dur="3.6s" repeatCount="indefinite"/>
   </circle>
   <text x="${PAD + 16}" y="32" fill="${C.accent}" font-size="10" font-weight="600" letter-spacing="2.4" font-family="${MONO}">${esc(title)}</text>
+${note ? `  <text x="${W - PAD}" y="32" fill="${C.muted}" font-size="8" letter-spacing="1.4" text-anchor="end" opacity="0.8" font-family="${MONO}">${esc(note)}</text>` : ""}
 
 ${body}
 </svg>
@@ -114,7 +115,7 @@ function statsCard(s, stamp) {
   return shell("st", "GITHUB / " + LOGIN.toUpperCase(), body + "\n" + foot);
 }
 
-function langsCard(langs) {
+function langsCard(langs, note) {
   const rows = langs.length ? langs : [["Awaiting first build", 0]];
   const body = rows
     .slice(0, 6)
@@ -128,7 +129,7 @@ function langsCard(langs) {
   <rect x="${PAD}" y="${y + 6}" width="${barW}" height="3.5" rx="1.75" fill="${ramp(i / 5)}"/>`;
     })
     .join("\n");
-  return shell("tl", "TOP LANGUAGES", body);
+  return shell("tl", "TOP LANGUAGES", body, note);
 }
 
 // ---- data ------------------------------------------------------------------
@@ -229,11 +230,36 @@ const EMPTY = {
 };
 
 const data = has("--placeholder") ? EMPTY : has("--demo") ? DEMO : await fetchStats();
+// A local scan (scripts/local-langs.mjs) sees the private repositories a CI
+// token cannot. Where its snapshot exists it wins for languages, and the card
+// says when it was taken so an ageing snapshot cannot pass as live.
+let langNote = null;
+const SNAPSHOT = "data/local-langs.json";
+if (!has("--placeholder") && existsSync(SNAPSHOT)) {
+  const snap = JSON.parse(readFileSync(SNAPSHOT, "utf8"));
+  const sum = Object.values(snap.languages).reduce((a, b) => a + b, 0) || 1;
+  data.langs = Object.entries(snap.languages)
+    .slice(0, 6)
+    .map(([n, v]) => [n, (v / sum) * 100]);
+  data.s.repos = snap.repos;
+  // The API only sees pull requests in repositories the token can read. The
+  // local count is a floor from merged history; whichever is larger is closer
+  // to the truth, and max() cannot double count.
+  if (snap.mergedPullRequests) {
+    data.s.prs = Math.max(data.s.prs, snap.mergedPullRequests);
+  }
+  // Commits stay with the API on purpose: `git log` here only walks the checked
+  // out branch of whatever clones exist locally, and GitHub already counts
+  // private contributions in the account-level total.
+  langNote = `${snap.reposScanned} REPOS · ${snap.scannedAt}`;
+  console.log(`languages from local snapshot: ${snap.repos} repos, scanned ${snap.scannedAt}`);
+}
+
 const stamp = has("--placeholder")
   ? "AWAITING FIRST BUILD"
   : "UPDATED " + new Date().toISOString().slice(0, 10);
 
 mkdirSync(OUT, { recursive: true });
 writeFileSync(join(OUT, "stats.svg"), statsCard(data.s, stamp));
-writeFileSync(join(OUT, "top-langs.svg"), langsCard(data.langs));
+writeFileSync(join(OUT, "top-langs.svg"), langsCard(data.langs, langNote));
 console.log(`wrote stats.svg + top-langs.svg to ${OUT}  (${stamp})`);

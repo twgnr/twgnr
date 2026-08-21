@@ -1,0 +1,171 @@
+{
+  "scannedAt": "2026-08-21",
+  "owner": "twgnr",
+  "repos": 67,
+  "reposCloned": 27,
+  "reposNotCloned": 40,
+  "reposScanned": 25,
+  "excluded": [
+    "fdev",
+    "fdev_training"
+  ],
+  "totalBytes": 45355912,
+  "vendoredFilesSkipped": 111,
+  "commits12mo": 499,
+  "mergedPullRequests": 81,
+  "identities": [
+    "rc-joop@hotmail.de",
+    "tobias.wagner@promata.de",
+    "tobiaswagner9988@gmail.com",
+    "49766516+twgnr@users.noreply.github.com"
+  ],
+  "authorsSeen": {
+    "rc-joop@hotmail.de": 475,
+    "tobias.wagner@promata.de": 12,
+    "49766516+twgnr@users.noreply.github.com": 12,
+    "41898282+github-actions[bot]@users.noreply.github.com": 1
+  },
+  "languages": {
+    "JavaScript": 18171236,
+    "C++": 12739158,
+    "Python": 5445900,
+    "TypeScript": 3707010,
+    "PHP": 2142598,
+    "PL/SQL": 1737781,
+    "CSS": 908992,
+    "HTML": 464990,
+    "PowerShell": 26498,
+    "CMake": 4498,
+    "Batchfile": 3002,
+    "Rust": 2128,
+    "Java": 1349,
+    "QMake": 772
+  },
+  "perRepo": [
+    {
+      "repo": "twgnr/Beyond-DJ",
+      "bytes": 2962060,
+      "top": "C++"
+    },
+    {
+      "repo": "twgnr/Beyond-DJ-2",
+      "bytes": 3444468,
+      "top": "C++"
+    },
+    {
+      "repo": "twgnr/Beyond-DJ-3",
+      "bytes": 2687566,
+      "top": "C++"
+    },
+    {
+      "repo": "twgnr/Beyond-Drums",
+      "bytes": 311284,
+      "top": "C++"
+    },
+    {
+      "repo": "twgnr/beyond-guitar",
+      "bytes": 400300,
+      "top": "C++"
+    },
+    {
+      "repo": "twgnr/beyond-loops",
+      "bytes": 228683,
+      "top": "C++"
+    },
+    {
+      "repo": "twgnr/BeyondVoice",
+      "bytes": 190046,
+      "top": "C++"
+    },
+    {
+      "repo": "twgnr/buck-o-mo",
+      "bytes": 1228071,
+      "top": "TypeScript"
+    },
+    {
+      "repo": "twgnr/chatter",
+      "bytes": 1125890,
+      "top": "JavaScript"
+    },
+    {
+      "repo": "twgnr/customer-4-saas",
+      "bytes": 1119851,
+      "top": "JavaScript"
+    },
+    {
+      "repo": "twgnr/EIRO",
+      "bytes": 8151605,
+      "top": "JavaScript"
+    },
+    {
+      "repo": "twgnr/Execute_Scripts",
+      "bytes": 2480402,
+      "top": "Python"
+    },
+    {
+      "repo": "twgnr/Kanban-SaaS",
+      "bytes": 4836601,
+      "top": "JavaScript"
+    },
+    {
+      "repo": "twgnr/NetFett",
+      "bytes": 593635,
+      "top": "Python"
+    },
+    {
+      "repo": "twgnr/pwd-manager",
+      "bytes": 3162053,
+      "top": "JavaScript"
+    },
+    {
+      "repo": "twgnr/SSHIT-Commander",
+      "bytes": 1315483,
+      "top": "Python"
+    },
+    {
+      "repo": "twgnr/SSHIT-Commander2",
+      "bytes": 1647423,
+      "top": "C++"
+    },
+    {
+      "repo": "twgnr/stock-analysis",
+      "bytes": 2217090,
+      "top": "TypeScript"
+    },
+    {
+      "repo": "twgnr/Stream-Deck-Tool-UI",
+      "bytes": 220318,
+      "top": "Python"
+    },
+    {
+      "repo": "twgnr/twgnr",
+      "bytes": 13761,
+      "top": "JavaScript"
+    },
+    {
+      "repo": "twgnr/twgnr-website",
+      "bytes": 444762,
+      "top": "TypeScript"
+    },
+    {
+      "repo": "twgnr/Viewler",
+      "bytes": 382508,
+      "top": "JavaScript"
+    },
+    {
+      "repo": "twgnr/WaveSix",
+      "bytes": 918121,
+      "top": "C++"
+    },
+    {
+      "repo": "twgnr/web-forum-saas-4",
+      "bytes": 4386852,
+      "top": "JavaScript"
+    },
+    {
+      "repo": "twgnr/web-vulnerability-scanner",
+      "bytes": 887079,
+      "top": "Python"
+    }
+  ]
+}
