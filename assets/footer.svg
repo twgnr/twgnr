@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" width="1200" height="120" fill="none" role="img" aria-label="">
+  <defs>
+    <radialGradient id="fGlowC" cx="1010" cy="120" r="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#47C2FF" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#47C2FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fGlowI" cx="150" cy="40" r="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7D8CFF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#7D8CFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fVig" cx="600" cy="95" r="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0.45" stop-color="#05080F" stop-opacity="0"/>
+      <stop offset="1" stop-color="#05080F" stop-opacity="0.5"/>
+    </radialGradient>
+    <pattern id="fGrid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0 H0 V36" fill="none" stroke="#94B4DC" stroke-width="1" stroke-opacity="0.12"/>
+    </pattern>
+    <filter id="deep" x="-10%" y="-60%" width="120%" height="220%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="fglow" x="-5%" y="-60%" width="110%" height="220%">
+      <feGaussianBlur stdDeviation="1.1" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="fclip">
+      <path d="M0 42 Q 60 26 120 42 T 240 42 T 360 42 T 480 42 T 600 42 T 720 42 T 840 42 T 960 42 T 1080 42 T 1200 42 V120 H0 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- dark blue banner, slightly transparent, with a wavy top edge -->
+  <path d="M0 42 Q 60 26 120 42 T 240 42 T 360 42 T 480 42 T 600 42 T 720 42 T 840 42 T 960 42 T 1080 42 T 1200 42 V120 H0 Z" fill="#0A101D" fill-opacity="0.88"/>
+
+  <g clip-path="url(#fclip)">
+    <rect x="0" y="0" width="1200" height="120" fill="url(#fGlowC)"/>
+    <rect x="0" y="0" width="1200" height="120" fill="url(#fGlowI)"/>
+    <rect x="0" y="0" width="1200" height="120" fill="url(#fGrid)"/>
+
+    <!-- DEPTH: blurred traces receding into the background -->
+    <g filter="url(#deep)" stroke-width="2" fill="none" stroke-linecap="square">
+      <path d="M-20 98 H240 V72 H520 V100 H820 V74 H1100 V98 H1220" stroke="#6E8BFF" opacity="0.18"/>
+      <path d="M300 130 V64 H540 V98" stroke="#47C2FF" opacity="0.13"/>
+    </g>
+
+    <!-- foreground circuit traces (sharp) -->
+    <g stroke="#FFFFFF" stroke-width="2" opacity="0.20" stroke-linecap="square" fill="none">
+      <path d="M-20 66 H160 V86 H380 V66 H600 V86 H820 V66 H1040 V86 H1220"/>
+      <path d="M-20 104 H220 V88 H460 V106 H720 V90 H980 V106 H1220"/>
+      <path d="M300 66 V44"/>
+      <path d="M760 90 V44"/>
+    </g>
+    <!-- thin light pulses, a gentle glow -->
+    <g stroke="#FFFFFF" stroke-width="1.3" stroke-linecap="round" filter="url(#fglow)" fill="none" opacity="0.9">
+      <path d="M-20 66 H160 V86 H380 V66 H600 V86 H820 V66 H1040 V86 H1220" stroke-dasharray="7 493">
+        <animate attributeName="stroke-dashoffset" values="0;-500" dur="1.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M-20 104 H220 V88 H460 V106 H720 V90 H980 V106 H1220" stroke-dasharray="7 493">
+        <animate attributeName="stroke-dashoffset" values="0;-500" dur="1.85s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    <g fill="none" stroke="#47C2FF" stroke-width="1.4">
+      <g transform="translate(380 66)"><rect x="-4" y="-4" width="8" height="8" rx="1.5"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.8s" repeatCount="indefinite"/></rect></g>
+      <g transform="translate(820 66)"><rect x="-4" y="-4" width="8" height="8" rx="1.5"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.3s" begin="0.7s" repeatCount="indefinite"/></rect></g>
+      <g transform="translate(460 106)"><rect x="-4" y="-4" width="8" height="8" rx="1.5"><animate attributeName="opacity" values="0.4;1;0.4" dur="3s" begin="0.4s" repeatCount="indefinite"/></rect></g>
+    </g>
+
+    <!-- DEPTH: vignette recedes the edges -->
+    <rect x="0" y="0" width="1200" height="120" fill="url(#fVig)"/>
+  </g>
+
+  <!-- DEPTH: lit wave crest (bevel) -->
+  <path d="M0 42 Q 60 26 120 42 T 240 42 T 360 42 T 480 42 T 600 42 T 720 42 T 840 42 T 960 42 T 1080 42 T 1200 42" fill="none" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1.2"/>
+</svg>
