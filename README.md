@@ -12,7 +12,7 @@
 
 <br/>
 
-[![Website](https://img.shields.io/badge/twgnr.de-47C2FF?style=for-the-badge)](https://twgnr.de) [![Music](https://img.shields.io/badge/L0wFl0w-1ED760?style=for-the-badge&logo=spotify&logoColor=white)](https://twgnr.de/#music) ![Location](https://img.shields.io/badge/Andernach%20%2F%20Cologne%2C%20Germany-7D8CFF?style=for-the-badge)
+[![Website](https://img.shields.io/badge/twgnr.de-47C2FF?style=for-the-badge)](https://twgnr.de) [![Music](https://img.shields.io/badge/L0wFl0w-1ED760?style=for-the-badge&logo=spotify&logoColor=white)](https://open.spotify.com/artist/6NUR2aSD2hOttjaN5IuReg) ![Location](https://img.shields.io/badge/Andernach%20%2F%20Cologne%2C%20Germany-7D8CFF?style=for-the-badge)
 
 </div>
 
@@ -86,6 +86,9 @@ By day: software engineer and Oracle database specialist. By night the same keyb
 | <a href="assets/projects-full/pwd-manager.png"><img src="assets/projects/pwd-manager.png" width="160" alt="" /></a> | **Password Manager** | Zero-knowledge vault across web, desktop & mobile — Argon2id, per-entry AES-256-GCM, passkeys (WebAuthn); the server only ever sees ciphertext. `Node.js` · `Electron` · `Capacitor` |
 | <a href="assets/projects-full/netfett.png"><img src="assets/projects/netfett.png" width="160" alt="" /></a> | **NetFett** | Network monitor and protocol analyzer in pure Python — raw sockets, no Npcap, and a dissector stack with zero third-party dependencies. `Python` · `PySide6` |
 | <a href="assets/projects-full/buck-o-mo.png"><img src="assets/projects/buck-o-mo.png" width="160" alt="" /></a> | **Buck-O-Mo** | Budget app that reads receipts and invoices — OCR runs **on-device**, only the extracted figures ever reach the database. `Next.js` · `React` · `MongoDB` |
+| <img src="assets/projects/beyond-finance.svg" width="160" alt="" /> | **Beyond Finance** | Accounting that books itself — a self-hosted business suite for small firms. Real double-entry on SKR03/SKR04 (or cash-basis EÜR), quotes through dunning, EN 16931 e-invoicing, FinTS bank sync, time tracking, and a DATEV batch the tax advisor imports directly. `Next.js` · `React` · `MongoDB` |
+| <a href="assets/projects-full/beyond-boards.png"><img src="assets/projects/beyond-boards.png" width="160" alt="" /></a> | **Beyond Boards** | Multi-tenant Kanban platform — a database per tenant, encrypted storage, white-labeling and a customizable board UI. Self-hosted and running in production. `Node.js` · `Express` · `MongoDB` |
+| <img src="assets/projects/beyond-forums.svg" width="160" alt="" /> | **Beyond Forums** | Sister product to Beyond Boards: multi-tenant forum hosting with encryption at rest, spam detection, audit logs and automated moderation tooling. `Node.js` · `Express` · `MongoDB` |
 
 ---
 
