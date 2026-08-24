@@ -1,18 +1,21 @@
 {
-  "scannedAt": "2026-08-21",
+  "scannedAt": "2026-08-24",
   "owner": "twgnr",
-  "repos": 67,
-  "reposCloned": 27,
+  "repos": 72,
+  "reposCloned": 32,
   "reposNotCloned": 40,
-  "reposScanned": 25,
+  "reposScanned": 27,
   "excluded": [
     "fdev",
-    "fdev_training"
+    "fdev_training",
+    "Kanban-SaaS",
+    "web-forum-saas-4",
+    "pwd-manager"
   ],
-  "totalBytes": 45355912,
-  "vendoredFilesSkipped": 111,
-  "commits12mo": 499,
-  "mergedPullRequests": 81,
+  "totalBytes": 48519434,
+  "vendoredFilesSkipped": 178,
+  "commits12mo": 529,
+  "mergedPullRequests": 88,
   "identities": [
     "rc-joop@hotmail.de",
     "tobias.wagner@promata.de",
@@ -20,26 +23,27 @@
     "49766516+twgnr@users.noreply.github.com"
   ],
   "authorsSeen": {
-    "rc-joop@hotmail.de": 475,
-    "tobias.wagner@promata.de": 12,
+    "rc-joop@hotmail.de": 500,
+    "tobias.wagner@promata.de": 17,
+    "twgnr@users.noreply.github.com": 14,
     "49766516+twgnr@users.noreply.github.com": 12,
-    "41898282+github-actions[bot]@users.noreply.github.com": 1
+    "41898282+github-actions[bot]@users.noreply.github.com": 4
   },
   "languages": {
-    "JavaScript": 18171236,
+    "JavaScript": 21034395,
     "C++": 12739158,
-    "Python": 5445900,
-    "TypeScript": 3707010,
+    "Python": 5394901,
+    "TypeScript": 3725815,
     "PHP": 2142598,
     "PL/SQL": 1737781,
-    "CSS": 908992,
-    "HTML": 464990,
+    "CSS": 1229655,
+    "HTML": 471826,
     "PowerShell": 26498,
+    "Batchfile": 5939,
     "CMake": 4498,
-    "Batchfile": 3002,
+    "Java": 2698,
     "Rust": 2128,
-    "Java": 1349,
-    "QMake": 772
+    "QMake": 1544
   },
   "perRepo": [
     {
@@ -73,13 +77,23 @@
       "top": "C++"
     },
     {
+      "repo": "twgnr/beyond-password",
+      "bytes": 5329605,
+      "top": "JavaScript"
+    },
+    {
+      "repo": "twgnr/beyond-shopping",
+      "bytes": 726350,
+      "top": "JavaScript"
+    },
+    {
       "repo": "twgnr/BeyondVoice",
       "bytes": 190046,
       "top": "C++"
     },
     {
       "repo": "twgnr/buck-o-mo",
-      "bytes": 1228071,
+      "bytes": 1246876,
       "top": "TypeScript"
     },
     {
@@ -103,18 +117,13 @@
       "top": "Python"
     },
     {
-      "repo": "twgnr/Kanban-SaaS",
-      "bytes": 4836601,
-      "top": "JavaScript"
-    },
-    {
       "repo": "twgnr/NetFett",
       "bytes": 593635,
       "top": "Python"
     },
     {
-      "repo": "twgnr/pwd-manager",
-      "bytes": 3162053,
+      "repo": "twgnr/pwd-manager-local",
+      "bytes": 1543515,
       "top": "JavaScript"
     },
     {
@@ -139,7 +148,7 @@
     },
     {
       "repo": "twgnr/twgnr",
-      "bytes": 13761,
+      "bytes": 22987,
       "top": "JavaScript"
     },
     {
@@ -158,8 +167,13 @@
       "top": "C++"
     },
     {
-      "repo": "twgnr/web-forum-saas-4",
-      "bytes": 4386852,
+      "repo": "twgnr/web-forum-next",
+      "bytes": 4638960,
+      "top": "JavaScript"
+    },
+    {
+      "repo": "twgnr/web-kanban-next",
+      "bytes": 3282567,
       "top": "JavaScript"
     },
     {

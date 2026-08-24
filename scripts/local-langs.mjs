@@ -42,7 +42,18 @@ const NOT_CLONED = Number(opt("--not-cloned", "0")) || 0;
  * every hand-written language. Linguist would count them; a portrait of what
  * someone actually writes should not.
  */
-const EXCLUDE = new Set(["fdev", "fdev_training"].filter((r) => !KEEP.includes(r)));
+const GENERATED = ["fdev", "fdev_training"];
+
+/**
+ * Repositories that were ported to a new repo (e.g. an Express/EJS app
+ * rewritten as Next.js) and are still cloned here. Both remotes are real and
+ * both count toward the repository total, but their file lists overlap
+ * heavily — counting the language bytes of both would credit the same work
+ * twice. Only the predecessor is excluded; its successor is scanned.
+ */
+const SUPERSEDED = ["Kanban-SaaS", "web-forum-saas-4", "pwd-manager"];
+
+const EXCLUDE = new Set([...GENERATED, ...SUPERSEDED].filter((r) => !KEEP.includes(r)));
 
 /**
  * Third-party code that ships inside the repo. Linguist skips these via its
@@ -101,8 +112,10 @@ for (const name of readdirSync(ROOT)) {
   const slug = url.replace(/\.git$/, "").split("/").slice(-2).join("/");
   if (!slug.toLowerCase().startsWith(OWNER.toLowerCase() + "/")) continue; // skip org repos
   discovered.add(slug);
-  if (EXCLUDE.has(slug.split("/")[1])) continue;
 
+  // EXCLUDE only skips language-byte counting further down — a superseded
+  // repo's commit and pull-request history is still its own, never repeated
+  // in the successor's fresh history, so it stays IN this map.
   const prev = byRemote.get(slug);
   if (!prev || when > prev.when) byRemote.set(slug, { dir, when, slug });
 }
@@ -116,34 +129,41 @@ let prs = 0;
 const authors = new Map();
 
 for (const { dir, slug } of [...byRemote.values()].sort((a, b) => a.slug.localeCompare(b.slug))) {
-  let files;
-  try {
-    files = git(dir, ["ls-files", "-z"]).split("\0").filter(Boolean);
-  } catch {
-    continue;
-  }
-
-  // `.h` is C or C++ depending on what else lives in the repo
-  const hLang = files.some((f) => /\.(cpp|cc|cxx|hpp)$/i.test(f)) ? "C++" : "C";
+  // Commit and PR history are unconditional below — only the language-byte
+  // count for a superseded repo is skipped, so its work is still credited
+  // once, via whichever repo actually holds the code today.
+  const languageScan = !EXCLUDE.has(slug.split("/")[1]);
   const repoTotals = new Map();
 
-  for (const f of files) {
-    if (VENDOR.test(f) || MINIFIED.test(f)) {
-      vendored++;
-      continue;
-    }
-    const ext = (f.split(".").pop() || "").toLowerCase();
-    if (ext === f.toLowerCase() || SKIP_EXT.has(ext)) continue;
-    const lang = ext === "h" ? hLang : LANG[ext];
-    if (!lang) continue;
-    let size;
+  if (languageScan) {
+    let files;
     try {
-      size = statSync(join(dir, f)).size;
+      files = git(dir, ["ls-files", "-z"]).split("\0").filter(Boolean);
     } catch {
-      continue; // tracked but not checked out
+      files = [];
     }
-    repoTotals.set(lang, (repoTotals.get(lang) || 0) + size);
-    totals.set(lang, (totals.get(lang) || 0) + size);
+
+    // `.h` is C or C++ depending on what else lives in the repo
+    const hLang = files.some((f) => /\.(cpp|cc|cxx|hpp)$/i.test(f)) ? "C++" : "C";
+
+    for (const f of files) {
+      if (VENDOR.test(f) || MINIFIED.test(f)) {
+        vendored++;
+        continue;
+      }
+      const ext = (f.split(".").pop() || "").toLowerCase();
+      if (ext === f.toLowerCase() || SKIP_EXT.has(ext)) continue;
+      const lang = ext === "h" ? hLang : LANG[ext];
+      if (!lang) continue;
+      let size;
+      try {
+        size = statSync(join(dir, f)).size;
+      } catch {
+        continue; // tracked but not checked out
+      }
+      repoTotals.set(lang, (repoTotals.get(lang) || 0) + size);
+      totals.set(lang, (totals.get(lang) || 0) + size);
+    }
   }
 
   try {
@@ -169,6 +189,11 @@ for (const { dir, slug } of [...byRemote.values()].sort((a, b) => a.slug.localeC
     prs += seen.size;
   } catch {
     /* empty history */
+  }
+
+  if (!languageScan) {
+    console.log(`  ${slug.padEnd(38)} ${"superseded".padStart(10)}  (language bytes excluded)`);
+    continue;
   }
 
   const bytes = [...repoTotals.values()].reduce((a, b) => a + b, 0);
