@@ -25,30 +25,30 @@
     <animate attributeName="opacity" values="0.5;1;0.5" dur="3.6s" repeatCount="indefinite"/>
   </circle>
   <text x="36" y="32" fill="#47C2FF" font-size="10" font-weight="600" letter-spacing="2.4" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">TOP LANGUAGES</text>
-  <text x="390" y="32" fill="#9AA4B2" font-size="8" letter-spacing="1.4" text-anchor="end" opacity="0.8" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">25 REPOS · 2026-08-21</text>
+  <text x="390" y="32" fill="#9AA4B2" font-size="8" letter-spacing="1.4" text-anchor="end" opacity="0.8" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">27 REPOS · 2026-08-24</text>
 
   <text x="20" y="54" fill="#FFFFFF" fill-opacity="0.92" font-size="10.5" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">JavaScript</text>
-  <text x="390" y="54" fill="#9AA4B2" font-size="10" text-anchor="end" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">40.1%</text>
+  <text x="390" y="54" fill="#9AA4B2" font-size="10" text-anchor="end" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">43.4%</text>
   <rect x="20" y="60" width="370" height="3.5" rx="1.75" fill="#94B4DC" fill-opacity="0.16"/>
-  <rect x="20" y="60" width="148" height="3.5" rx="1.75" fill="#47c2ff"/>
+  <rect x="20" y="60" width="160" height="3.5" rx="1.75" fill="#47c2ff"/>
   <text x="20" y="77" fill="#FFFFFF" fill-opacity="0.92" font-size="10.5" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">C++</text>
-  <text x="390" y="77" fill="#9AA4B2" font-size="10" text-anchor="end" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">28.1%</text>
+  <text x="390" y="77" fill="#9AA4B2" font-size="10" text-anchor="end" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">26.3%</text>
   <rect x="20" y="83" width="370" height="3.5" rx="1.75" fill="#94B4DC" fill-opacity="0.16"/>
-  <rect x="20" y="83" width="104" height="3.5" rx="1.75" fill="#5dacff"/>
+  <rect x="20" y="83" width="97" height="3.5" rx="1.75" fill="#5dacff"/>
   <text x="20" y="100" fill="#FFFFFF" fill-opacity="0.92" font-size="10.5" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">Python</text>
-  <text x="390" y="100" fill="#9AA4B2" font-size="10" text-anchor="end" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">12.0%</text>
+  <text x="390" y="100" fill="#9AA4B2" font-size="10" text-anchor="end" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">11.1%</text>
   <rect x="20" y="106" width="370" height="3.5" rx="1.75" fill="#94B4DC" fill-opacity="0.16"/>
-  <rect x="20" y="106" width="44" height="3.5" rx="1.75" fill="#7297ff"/>
+  <rect x="20" y="106" width="41" height="3.5" rx="1.75" fill="#7297ff"/>
   <text x="20" y="123" fill="#FFFFFF" fill-opacity="0.92" font-size="10.5" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">TypeScript</text>
-  <text x="390" y="123" fill="#9AA4B2" font-size="10" text-anchor="end" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">8.2%</text>
+  <text x="390" y="123" fill="#9AA4B2" font-size="10" text-anchor="end" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">7.7%</text>
   <rect x="20" y="129" width="370" height="3.5" rx="1.75" fill="#94B4DC" fill-opacity="0.16"/>
-  <rect x="20" y="129" width="30" height="3.5" rx="1.75" fill="#977feb"/>
+  <rect x="20" y="129" width="28" height="3.5" rx="1.75" fill="#977feb"/>
   <text x="20" y="146" fill="#FFFFFF" fill-opacity="0.92" font-size="10.5" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">PHP</text>
-  <text x="390" y="146" fill="#9AA4B2" font-size="10" text-anchor="end" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">4.7%</text>
+  <text x="390" y="146" fill="#9AA4B2" font-size="10" text-anchor="end" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">4.4%</text>
   <rect x="20" y="152" width="370" height="3.5" rx="1.75" fill="#94B4DC" fill-opacity="0.16"/>
-  <rect x="20" y="152" width="17" height="3.5" rx="1.75" fill="#cb66c4"/>
+  <rect x="20" y="152" width="16" height="3.5" rx="1.75" fill="#cb66c4"/>
   <text x="20" y="169" fill="#FFFFFF" fill-opacity="0.92" font-size="10.5" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">PL/SQL</text>
-  <text x="390" y="169" fill="#9AA4B2" font-size="10" text-anchor="end" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">3.8%</text>
+  <text x="390" y="169" fill="#9AA4B2" font-size="10" text-anchor="end" font-family="ui-monospace, Consolas, 'DejaVu Sans Mono', monospace">3.6%</text>
   <rect x="20" y="175" width="370" height="3.5" rx="1.75" fill="#94B4DC" fill-opacity="0.16"/>
-  <rect x="20" y="175" width="14" height="3.5" rx="1.75" fill="#ff4d9d"/>
+  <rect x="20" y="175" width="13" height="3.5" rx="1.75" fill="#ff4d9d"/>
 </svg>
