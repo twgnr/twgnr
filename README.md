@@ -68,6 +68,7 @@ By day: software engineer and Oracle database specialist. By night the same keyb
 
 | | Project | What it is |
 | :-- | :-- | :-- |
+| <a href="assets/projects-full/chainer.png"><img src="assets/projects/chainer.png" width="160" alt="" /></a> | **[Chainer](https://github.com/twgnr/Chainer)** | Crypto tracing across eight chains from **free** data sources — taint analysis (Haircut/FIFO/Poison), wallet clustering, sanctions and abuse lists, checksummed evidence log. Web app **and** a dependency-free native Windows client. `Next.js` · `React` · `C++17` · `Win32` |
 | <a href="assets/projects-full/sshit-commander.png"><img src="assets/projects/sshit-commander.png" width="160" alt="" /></a> | **[SSHIT-Commander](https://github.com/twgnr/SSHIT-Commander2)** `Beta` | Dual-pane SSH/SFTP file manager with a real terminal (ConPTY locally, PTY over SSH). `C++20` · `Qt 6` · `libssh2` |
 | <a href="assets/projects-full/web-vulnerability-scanner.png"><img src="assets/projects/web-vulnerability-scanner.png" width="160" alt="" /></a> | **[Web Vulnerability Scanner](https://github.com/twgnr/web-vulnerability-scanner)** | Non-destructive scanner for **authorized** security testing — strictly defensive by design. `Python` · `Flask` |
 | <a href="assets/projects-full/ai-stock-analyzer.png"><img src="assets/projects/ai-stock-analyzer.png" width="160" alt="" /></a> | **[AI Stock Analyzer](https://github.com/twgnr/ai-stock-analyzer)** | Self-hosted, AI-assisted equity research & portfolio PWA with a multi-provider LLM backend. `Next.js` · `React` · `MongoDB` |
